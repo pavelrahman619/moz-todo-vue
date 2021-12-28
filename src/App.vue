@@ -10,7 +10,10 @@
           :done="item.done"
           :id="item.id"
           @checkbox-changed="updateDoneStatus(item.id)"
-        ></to-do-item>
+          @item-deleted="deleteToDo(item.id)"
+          @item-edited="editToDo(item.id, $event)"
+        >
+        </to-do-item>
       </li>
     </ul>
   </div>

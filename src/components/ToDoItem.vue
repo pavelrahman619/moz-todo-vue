@@ -19,10 +19,14 @@
       </button>
     </div>
   </div>
-  <to-do-item-edit-form v-else :id="id" :label="label"
-                      @item-edited="itemEdited"
-                      @edit-cancelled="editCancelled">
-</to-do-item-edit-form>
+  <to-do-item-edit-form
+    v-else
+    :id="id"
+    :label="label"
+    @item-edited="itemEdited"
+    @edit-cancelled="editCancelled"
+  >
+  </to-do-item-edit-form>
 </template>
 
 
@@ -41,9 +45,13 @@ export default {
   },
   data() {
     return {
-      isDone: this.done,
       isEditing: false,
     };
+  },
+  computed: {
+    isDone() {
+      return this.done;
+    },
   },
   methods: {
     deleteToDo() {
