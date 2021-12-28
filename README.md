@@ -79,3 +79,8 @@ For example:
 
 "Cancel" `<button>` listens for `click` event.
 **Result**: `onCancel()` method is invoked, which emits the `edit-cancelled` event (which is then listened for inside `ToDoItem.vue`, see above).
+
+
+
+## Lifecycle Diagram
+https://vuejs.org/v2/guide/instance.html#Lifecycle-Diagram
