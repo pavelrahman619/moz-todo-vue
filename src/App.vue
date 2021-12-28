@@ -33,9 +33,9 @@ export default {
   data() {
     return {
       ToDoItems: [
-        { id: uniqueId("todo-"), label: "eeee", done: true },
-        { id: uniqueId("todo-"), label: "sssss", done: true },
-        { id: uniqueId("todo-"), label: "rere", done: false },
+        { id: uniqueId("todo-"), label: "Task 1", done: true },
+        { id: uniqueId("todo-"), label: "Task 2", done: true },
+        { id: uniqueId("todo-"), label: "Task 3", done: false },
       ],
     };
   },
