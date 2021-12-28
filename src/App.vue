@@ -49,6 +49,14 @@ export default {
       const toDoToUpdate = this.ToDoItems.find((item) => item.id === toDoId);
       toDoToUpdate.done = !toDoToUpdate.done;
     },
+    deleteToDo(toDoId) {
+      const itemIndex = this.ToDoItems.findIndex((item) => item.id === toDoId);
+      this.ToDoItems.splice(itemIndex, 1);
+    },
+    editToDo(toDoId, newLabel) {
+      const toDoToEdit = this.ToDoItems.find((item) => item.id === toDoId);
+      toDoToEdit.label = newLabel;
+    },
   },
   computed: {
     listSummary() {
